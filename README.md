@@ -67,7 +67,7 @@ Use `{phone}` wherever the normalized phone number should be inserted.
 ### Ticket Calculation
 
 $$
-successrate = \min\left(\frac{sent}{requested}, 1\right)
+success_rate = \min\left(\frac{sent}{requested}, 1\right)
 $$
 
 $$
