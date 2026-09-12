@@ -66,16 +66,16 @@ Use `{phone}` wherever the normalized phone number should be inserted.
 
 ### Ticket Calculation
 
-```math
+$$
 success\_rate = \min\left(\frac{sent}{requested}, 1\right)
-```
+$$
 
-```math
+$$
 capacity\_weight =
 \log_{max\_capacity + 1}(capacity + 1)
-```
+$$
 
-```math
+$$
 ticket =
 \operatorname{clamp}
 \left(
@@ -87,9 +87,10 @@ ticket =
 0,
 100
 \right)
-```
+$$
 
 If `requested < 1` or `max_capacity < 1`, the ticket is `0`.
+
 ## Repository
 
 * Main project: [salvo](https://github.com/TheBitGlitch/salvo)
