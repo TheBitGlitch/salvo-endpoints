@@ -63,7 +63,6 @@ Use `{phone}` wherever the normalized phone number should be inserted.
 | `json`     | No       | Request payload.                               |
 | `data`     | No       | Form-data request payload.                     |
 
-
 ### Ticket Calculation
 
 $$
@@ -77,14 +76,14 @@ $$
 
 $$
 ticket =
-\operatorname{clamp}
-\left(
-\operatorname{round}
-\left(
+\min\left(
+\max\left(
+\operatorname{round}\left(
 100 \times success\_rate^{0.6}
 \times capacity\_weight^{0.4}
 \right),
-0,
+0
+\right),
 100
 \right)
 $$
