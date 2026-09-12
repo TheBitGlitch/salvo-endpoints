@@ -66,30 +66,20 @@ Use `{phone}` wherever the normalized phone number should be inserted.
 
 ### Ticket Calculation
 
-$$
-success\_rate = \min\left(\frac{sent}{requested}, 1\right)
-$$
+success_rate = min(sent / requested, 1)
 
-$$
-capacity\_weight =
-\log_{max\_capacity + 1}(capacity + 1)
-$$
+capacity_weight = log(capacity + 1, max_capacity + 1)
 
-$$
-ticket =
-\min\left(
-\max\left(
-\text{round}\left(
-100 \times success\_rate^{0.6}
-\times capacity\_weight^{0.4}
-\right),
-0
-\right),
-100
-\right)
-$$
+ticket = min(
+    max(
+        round(100 * success_rate^0.6 * capacity_weight^0.4),
+        0
+    ),
+    100
+)
 
 If `requested < 1` or `max_capacity < 1`, the ticket is `0`.
+
 
 ## Repository
 
