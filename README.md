@@ -67,17 +67,22 @@ Use `{phone}` wherever the normalized phone number should be inserted.
 ### Ticket Calculation
 
 $$
-S = \min\left(\frac{sent}{requested}, 1\right)
+success\_rate = \min\left(\frac{sent}{requested}, 1\right)
 $$
 
 $$
-C = \log_{max\_capacity + 1}(capacity + 1)
+capacity\_weight =
+\log_{max\_capacity + 1}(capacity + 1)
 $$
 
 $$
-T = \min\left(
+ticket =
+\min\left(
 \max\left(
-round\left(100S^{0.6}C^{0.4}\right),
+\text{round}\left(
+100 \times success\_rate^{0.6}
+\times capacity\_weight^{0.4}
+\right),
 0
 \right),
 100
