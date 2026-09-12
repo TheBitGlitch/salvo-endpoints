@@ -84,3 +84,4 @@ If `requested < 1` or `max_capacity < 1`, the ticket is `0`.
 ## Repository
 
 * Main project: [salvo](https://github.com/TheBitGlitch/salvo)
+* Endpoint configuration: [salvo-endpoints](https://github.com/TheBitGlitch/salvo-endpoints)
