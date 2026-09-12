@@ -67,11 +67,11 @@ Use `{phone}` wherever the normalized phone number should be inserted.
 ### Ticket Calculation
 
 $$
-success_rate = \min\left(\frac{sent}{requested}, 1\right)
+success\_rate = \min\left(\frac{sent}{requested}, 1\right)
 $$
 
 $$
-capacityweight =
+capacity\_weight =
 \log_{max\_capacity + 1}(capacity + 1)
 $$
 
